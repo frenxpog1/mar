@@ -1,0 +1,136 @@
+/* Opportunities Styles */
+.opportunities-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.opportunities-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.opportunities-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.opportunity-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.opportunity-card:hover {
+    transform: translateY(-5px);
+}
+
+.opportunity-header {
+    margin-bottom: 1rem;
+}
+
+.opportunity-header h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.company-name {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.opportunity-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.job-type, .salary {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.apply-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem; /* Increased padding for a larger button */
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); /* Gradient background */
+    color: var(--white);
+    border: 1px solid var(--primary-color); /* Border for definition */
+    border-radius: 8px; /* Slightly larger than var(--border-radius) for a modern look */
+    font-size: 0.9rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.apply-btn:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color)); /* Reverse gradient on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Larger shadow for a lifted effect */
+    transform: scale(1.05); /* Slight scale-up for a pressable feel */
+    color: var(--white);
+}
+
+.company-details {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.company-info {
+    margin-bottom: 2rem;
+}
+
+.company-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.company-location {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.company-description p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.company-jobs h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.job-item {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.job-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.job-item h5 {
+    font-size: 1rem;
+}

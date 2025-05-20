@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussions - Afterclass</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="discussions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="app-body">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="images/logo.png" alt="Afterclass Logo">
+            <span>afterclass</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">
+                <i class="fas fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="study-hub.html">
+                <i class="fas fa-book"></i>
+                <span>Study Hub</span>
+            </a>
+            <a href="discussions.html" class="active">
+                <i class="fas fa-comments"></i>
+                <span>Discussions</span>
+            </a>
+            <a href="afterclass-ai.html" class="active">
+                <i class="fas fa-robot"></i>
+                <span>Afterclassm[AI]te</span>
+            </a>
+            <a href="schedules.html">
+                <i class="fas fa-calendar"></i>
+                <span>Schedules</span>
+            </a>
+            <a href="opportunities.html">
+                <i class="fas fa-briefcase"></i>
+                <span>Opportunities</span>
+            </a>
+            <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="app-header">
+            <div class="header-welcome">
+                <h1>Discussions</h1>
+            </div>
+            <div class="header-search">
+                <input type="text" placeholder="Search...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="header-profile">
+                <img src="images/profile.png" alt="Profile Picture">
+                <i class="fas fa-bell"></i>
+            </div>
+        </header>
+
+        <div class="discussions-content">
+            <div class="discussions-filters">
+                <button class="filter-btn active">All Posts</button>
+                <button class="filter-btn">My Posts</button>
+            </div>
+
+            <div class="discussions-grid">
+                <div class="discussions-main">
+                    <div class="discussion-post featured">
+                        <div class="post-header">
+                            <div class="post-author">
+                                <img src="images/avatar1.png" alt="User">
+                                <div>
+                                    <h3>John Smith</h3>
+                                    <p>2 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <button><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h2>How to tutorial paper mapping proj: basic lang.</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tortor quis diam tincidunt, vel elementum libero varius. Nulla facilisi. Praesent euismod, nisl vel tincidunt ultricies, nunc nisl aliquam nunc, vel tincidunt nisl nisl vel nisl. Nulla facilisi. Praesent euismod, nisl vel tincidunt ultricies, nunc nisl aliquam nunc, vel tincidunt nisl nisl vel nisl.</p>
+                            <div class="post-image">
+                                <img src="images/discussion-image.png" alt="Discussion Image">
+                            </div>
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-stats">
+                                <span><i class="fas fa-heart"></i> 24 Likes</span>
+                                <span><i class="fas fa-comment"></i> 5 Comments</span>
+                                <span><i class="fas fa-share"></i> 3 Shares</span>
+                            </div>
+                            <div class="post-actions">
+                                <button><i class="far fa-heart"></i> Like</button>
+                                <button><i class="far fa-comment"></i> Comment</button>
+                                <button><i class="far fa-share-square"></i> Share</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discussion-post">
+                        <div class="post-header">
+                            <div class="post-author">
+                                <img src="images/avatar1.png" alt="User">
+                                <div>
+                                    <h3>Jane Doe</h3>
+                                    <p>3 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <button><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h2>HELP! TUTORIAL ON HOW TO APPLY SYNTHESIS ACROSS TEXTS AND THE PAST</h2>
+                            <p>Nulla facilisi. Praesent euismod, nisl vel tincidunt ultricies, nunc nisl aliquam nunc, vel tincidunt nisl nisl vel nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tortor quis diam tincidunt, vel elementum libero varius.</p>
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-stats">
+                                <span><i class="fas fa-heart"></i> 18 Likes</span>
+                                <span><i class="fas fa-comment"></i> 12 Comments</span>
+                                <span><i class="fas fa-share"></i> 2 Shares</span>
+                            </div>
+                            <div class="post-actions">
+                                <button><i class="far fa-heart"></i> Like</button>
+                                <button><i class="far fa-comment"></i> Comment</button>
+                                <button><i class="far fa-share-square"></i> Share</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discussion-post">
+                        <div class="post-header">
+                            <div class="post-author">
+                                <img src="images/avatar1.png" alt="User">
+                                <div>
+                                    <h3>Alex Johnson</h3>
+                                    <p>4 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <button><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h2>How to apply synthesis across texts and the past</h2>
+                            <p>Sed consequat tortor quis diam tincidunt, vel elementum libero varius. Nulla facilisi. Praesent euismod, nisl vel tincidunt ultricies, nunc nisl aliquam nunc, vel tincidunt nisl nisl vel nisl.</p>
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-stats">
+                                <span><i class="fas fa-heart"></i> 32 Likes</span>
+                                <span><i class="fas fa-comment"></i> 8 Comments</span>
+                                <span><i class="fas fa-share"></i> 5 Shares</span>
+                            </div>
+                            <div class="post-actions">
+                                <button><i class="far fa-heart"></i> Like</button>
+                                <button><i class="far fa-comment"></i> Comment</button>
+                                <button><i class="far fa-share-square"></i> Share</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discussions-sidebar">
+                    <div class="recent-posts-sidebar">
+                        <h3>Recent Posts</h3>
+                        <div class="sidebar-posts">
+                            <div class="sidebar-post">
+                                <div class="post-avatar">
+                                    <img src="images/avatar1.png" alt="User">
+                                </div>
+                                <div class="post-content">
+                                    <h4>How to tutorial paper mapping proj: basic lang.</h4>
+                                    <p>Posted 2h ago • 5 comments</p>
+                                </div>
+                                <div class="post-actions">
+                                    <button><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                            <div class="sidebar-post">
+                                <div class="post-avatar">
+                                    <img src="images/avatar1.png" alt="User">
+                                </div>
+                                <div class="post-content">
+                                    <h4>HELP! TUTORIAL ON HOW TO APPLY SYNTHESIS ACROSS TEXTS AND THE PAST</h4>
+                                    <p>Posted 3h ago • 12 comments</p>
+                                </div>
+                                <div class="post-actions">
+                                    <button><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                            <div class="sidebar-post">
+                                <div class="post-avatar">
+                                    <img src="images/avatar1.png" alt="User">
+                                </div>
+                                <div class="post-content">
+                                    <h4>How to apply synthesis across texts and the past</h4>
+                                    <p>Posted 4h ago • 8 comments</p>
+                                </div>
+                                <div class="post-actions">
+                                    <button><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                            <div class="sidebar-post">
+                                <div class="post-avatar">
+                                    <img src="images/avatar1.png" alt="User">
+                                </div>
+                                <div class="post-content">
+                                    <h4>Tutorial - paper templating using word software</h4>
+                                    <p>Posted 5h ago • 3 comments</p>
+                                </div>
+                                <div class="post-actions">
+                                    <button><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                            <div class="sidebar-post">
+                                <div class="post-avatar">
+                                    <img src="images/avatar1.png" alt="User">
+                                </div>
+                                <div class="post-content">
+                                    <h4>PLS HELP! Can't get my target score in research design during ex</h4>
+                                    <p>Posted 6h ago • 15 comments</p>
+                                </div>
+                                <div class="post-actions">
+                                    <button><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-section">
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="help-content">
+                        <h3>Having trouble with your homework?</h3>
+                        <p>Our community is here to help! Post your question and get answers from fellow students and tutors.</p>
+                        <button class="help-btn">Ask a Question</button>
+                    </div>
+                </div>
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="help-content">
+                        <h3>How to get the most from Discussions</h3>
+                        <p>Be specific in your questions, include relevant details, and always be respectful of others' contributions.</p>
+                        <button class="help-btn">View Guidelines</button>
+                    </div>
+                </div>
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="help-content">
+                        <h3>Top Contributors This Week</h3>
+                        <p>Recognize and thank those who have been most helpful in the community this week.</p>
+                        <button class="help-btn">View Contributors</button>
+                    </div>
+                </div>
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="help-content">
+                        <h3>Study Resources</h3>
+                        <p>Check out our curated study resources to help you excel in your courses.</p>
+                        <button class="help-btn">Browse Resources</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

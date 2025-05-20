@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Afterclass</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="app-body">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="images/logo.png" alt="Afterclass Logo">
+            <span>afterclass</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">
+                <i class="fas fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="study-hub.html">
+                <i class="fas fa-book"></i>
+                <span>Study Hub</span>
+            </a>
+            <a href="discussions.html">
+                <i class="fas fa-comments"></i>
+                <span>Discussions</span>
+            </a>
+            <a href="afterclass-ai.html">
+                <i class="fas fa-robot"></i>
+                <span>Afterclassm[AI]te</span>
+            </a>
+            <a href="schedules.html">
+                <i class="fas fa-calendar"></i>
+                <span>Schedules</span>
+            </a>
+            <a href="opportunities.html">
+                <i class="fas fa-briefcase"></i>
+                <span>Opportunities</span>
+            </a>
+            <a href="settings.html" class="active">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="app-header">
+            <div class="header-welcome">
+                <h1>Settings</h1>
+                <p>Manage your account and preferences</p>
+            </div>
+            <div class="header-search">
+                <input type="text" placeholder="Search...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="header-profile">
+                <img src="images/profile.png" alt="Profile Picture">
+                <i class="fas fa-bell"></i>
+            </div>
+        </header>
+
+        <div class="settings-content">
+            <div class="settings-sidebar">
+                <div class="settings-nav">
+                    <a href="#profile" class="active">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#account">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="#notifications">
+                        <i class="fas fa-bell"></i>
+                        <span>Notifications</span>
+                    </a>
+                    <a href="#appearance">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Appearance</span>
+                    </a>
+                    <a href="#privacy">
+                        <i class="fas fa-lock"></i>
+                        <span>Privacy</span>
+                    </a>
+                    <a href="#billing">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Billing</span>
+                    </a>
+                    <a href="#help">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Help</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="settings-main">
+                <section id="profile" class="settings-section">
+                    <h2>Profile Settings</h2>
+                    <p>Update your personal information and how others see you on the platform.</p>
+
+                    <div class="profile-settings">
+                        <div class="profile-photo">
+                            <div class="photo-container">
+                                <img src="images/profile.png" alt="Profile Picture">
+                                <div class="photo-overlay">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                            </div>
+                            <button class="change-photo-btn">Change Photo</button>
+                        </div>
+
+                        <div class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" value="Francis">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" value="Batiencela">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" value="francis.batiencela@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" value="+63 912 345 6789">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bio">Bio</label>
+                                <textarea id="bio" rows="4">Student at Manila University, studying Computer Science. Passionate about web development and AI.</textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" value="Manila, Philippines">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="website">Website</label>
+                                <input type="url" id="website" value="https://francisb.example.com">
+                            </div>
+
+                            <div class="form-actions">
+                                <button class="cancel-btn">Cancel</button>
+                                <button class="save-btn">Save Changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="account" class="settings-section">
+                    <h2>Account Settings</h2>
+                    <p>Manage your account security and preferences.</p>
+
+                    <div class="account-settings">
+                        <div class="settings-card">
+                            <h3>Change Password</h3>
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword">
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm New Password</label>
+                                <input type="password" id="confirmPassword">
+                            </div>
+                            <button class="save-btn">Update Password</button>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Two-Factor Authentication</h3>
+                            <p>Add an extra layer of security to your account.</p>
+                            <div class="toggle-option">
+                                <span>Enable Two-Factor Authentication</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <button class="secondary-btn">Set Up Two-Factor</button>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Connected Accounts</h3>
+                            <p>Connect your account to other services.</p>
+                            <div class="connected-account">
+                                <div class="account-info">
+                                    <i class="fab fa-google"></i>
+                                    <span>Google</span>
+                                </div>
+                                <button class="connect-btn connected">Connected</button>
+                            </div>
+                            <div class="connected-account">
+                                <div class="account-info">
+                                    <i class="fab fa-facebook"></i>
+                                    <span>Facebook</span>
+                                </div>
+                                <button class="connect-btn">Connect</button>
+                            </div>
+                            <div class="connected-account">
+                                <div class="account-info">
+                                    <i class="fab fa-apple"></i>
+                                    <span>Apple</span>
+                                </div>
+                                <button class="connect-btn">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="notifications" class="settings-section">
+                    <h2>Notification Settings</h2>
+                    <p>Control how and when you receive notifications.</p>
+
+                    <div class="notification-settings">
+                        <div class="settings-card">
+                            <h3>Email Notifications</h3>
+                            <div class="toggle-option">
+                                <span>Assignment Reminders</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-option">
+                                <span>Discussion Replies</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-option">
+                                <span>New Opportunities</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-option">
+                                <span>System Updates</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-option">
+                                <span>Marketing Emails</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Push Notifications</h3>
+                            <div class="toggle-option">
+                                <span>Assignment Deadlines</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-option">
+                                <span>Discussion Mentions</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-option">
+                                <span>New Messages</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-option">
+                                <span>Calendar Events</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* Study Hub Styles */
+.study-hub-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.subject-filters {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    background-color: var(--gray-100);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+/* New grid layout for main content and sidebar */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2:1 ratio for main section and sidebar */
+    gap: 1.5rem;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.side-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.recent-posts {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    height: calc(100vh - 200px); /* Adjusted height to fit sidebar */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.recent-posts h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.post-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius);
+}
+
+.post-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-content {
+    flex: 1;
+}
+
+.post-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.post-content p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    color: var(--gray-500);
+    font-size: 1rem;
+}
+
+
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.material-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.material-card:hover {
+    transform: translateY(-5px);
+}
+
+.material-header {
+    margin-bottom: 1.5rem;
+}
+
+.material-header h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.material-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(65, 105, 225, 0.1);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.material-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.material-link:hover {
+    background-color: var(--primary-dark);
+    color: var(--white);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .content-grid {
+        grid-template-columns: 1fr; /* Stack sections vertically */
+    }
+
+    .side-section {
+        order: -1; /* Move recent posts above study materials on smaller screens */
+    }
+
+    .recent-posts {
+        height: auto; /* Remove fixed height for smaller screens */
+    }
+
+    .materials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .materials-grid {
+        grid-template-columns: 1fr;
+    }
+}

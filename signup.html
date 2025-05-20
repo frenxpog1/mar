@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Afterclass</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="login.js" defer></script>
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-background"></div>
+        <div class="auth-content">
+            <div class="auth-header">
+                <nav class="auth-nav">
+                    <a href="index.html" class="auth-logo">
+                        <img src="images/logo1.png" alt="Afterclass Logo">
+                        <span>afterclass</span>
+                    </a>
+                    <a href="index.html">Home</a>
+                    <a href="signup.html">Features</a>
+                    <a href="#" class="download-btn">Download</a>
+                </nav>
+            </div>
+            <div class="welcome-section">
+                <h1>Welcome!</h1>
+                <p>The Afterclass platform is here to help you manage your academic life in one place.</p>
+            </div>
+            <div class="auth-form-container">
+                <form class="auth-form">
+                    <div class="register-with">Register with</div>
+                    <div class="social-auth">
+                        <button class="social-btn facebook" type="button"><i class="fab fa-facebook-f"></i></button>
+                        <button class="social-btn apple" type="button"><i class="fab fa-apple"></i></button>
+                        <button class="social-btn google" type="button"><i class="fab fa-google"></i></button>
+                    </div>
+                    <div class="divider"><span>or</span></div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Your password">
+                    </div>
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="auth-button">Sign Up</button>
+                    <div class="auth-alt">
+                        <p>Already have an account? <a href="login.html">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
