@@ -1,18 +1,17 @@
 // Login page specific JavaScript
 document.addEventListener("DOMContentLoaded", () => {
   // Get form elements
-  const loginForm = document.querySelector(".auth-form");
-  const usernameInput = document.getElementById("username");
+  const loginForm = document.getElementById("loginForm");
+  const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
-  const signInButton = document.querySelector(".auth-button");
   const errorMessage = document.getElementById("error-message");
 
   // Add event listener to the form
-  if (loginForm && usernameInput && passwordInput && signInButton) {
+  if (loginForm) {
     loginForm.addEventListener("submit", async function(e) {
       e.preventDefault();
       
-      const email = usernameInput.value;
+      const email = emailInput.value;
       const password = passwordInput.value;
       
       // Basic validation
@@ -25,18 +24,33 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         // For demo purposes, we'll use a simple authentication
         // In a real application, you would make an API call to your backend
-        if (email === 'demo@example.com' && password === 'password') {
+        if (email === 'francis@email.com' && password === '123') {
           // Store authentication state
           localStorage.setItem('isAuthenticated', 'true');
           localStorage.setItem('userEmail', email);
           
-          // Redirect to dashboard
-          window.location.href = 'dashboard.html';
-        } else {
-          errorMessage.textContent = 'Invalid email or password.';
+          // Show success message
+          errorMessage.style.color = 'var(--success)';
+          errorMessage.textContent = 'Login successful! Redirecting...';
           errorMessage.style.display = 'block';
+          
+          // Redirect to dashboard after short delay
+          setTimeout(() => {
+            window.location.href = 'dashboard.html';
+          }, 1000);
+        } else {
+          errorMessage.style.color = 'var(--danger)';
+          errorMessage.textContent = 'Invalid email or password. Try francis@email.com/123';
+          errorMessage.style.display = 'block';
+          
+          // Shake the form
+          loginForm.classList.add("shake");
+          setTimeout(() => {
+            loginForm.classList.remove("shake");
+          }, 500);
         }
       } catch (error) {
+        errorMessage.style.color = 'var(--danger)';
         errorMessage.textContent = 'An error occurred. Please try again.';
         errorMessage.style.display = 'block';
       }
@@ -67,15 +81,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add "Enter" key support
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" && usernameInput && passwordInput) {
-      if (usernameInput.value === "francis@email.com" && passwordInput.value === "123") {
+    if (e.key === "Enter" && emailInput && passwordInput) {
+      if (emailInput.value === "francis@email.com" && passwordInput.value === "123") {
         // Show success and redirect
         showMessage("Login successful! Redirecting to dashboard...", "success");
 
         // Add loading state to the button
-        if (signInButton) {
-          signInButton.disabled = true;
-          signInButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing In...';
+        if (loginForm) {
+          loginForm.classList.add("shake");
+          setTimeout(() => {
+            loginForm.classList.remove("shake");
+          }, 500);
         }
 
         // Redirect to dashboard
