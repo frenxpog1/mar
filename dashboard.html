@@ -363,5 +363,19 @@
             </div>
         </div>
     </main>
+
+    <script>
+        // Check if user is authenticated
+        if (!localStorage.getItem('isAuthenticated')) {
+            window.location.href = 'login.html';
+        }
+
+        // Handle logout
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            localStorage.removeItem('isAuthenticated');
+            localStorage.removeItem('userEmail');
+            window.location.href = 'login.html';
+        });
+    </script>
 </body>
 </html>

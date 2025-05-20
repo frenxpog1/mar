@@ -5,35 +5,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const usernameInput = document.getElementById("username");
   const passwordInput = document.getElementById("password");
   const signInButton = document.querySelector(".auth-button");
+  const errorMessage = document.getElementById("error-message");
 
   // Add event listener to the form
   if (loginForm && usernameInput && passwordInput && signInButton) {
-    loginForm.addEventListener("submit", (e) => {
+    loginForm.addEventListener("submit", async function(e) {
       e.preventDefault();
-
-      // Check for specific credentials
-      if (usernameInput.value === "francis@email.com" && passwordInput.value === "123") {
-        // Show success message
-        showMessage("Login successful! Redirecting to dashboard...", "success");
-
-        // Add loading state to button
-        signInButton.disabled = true;
-        const originalText = signInButton.textContent;
-        signInButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing In...';
-
-        // Redirect to dashboard after short delay
-        setTimeout(() => {
-          window.location.href = "dashboard.html";
-        }, 1000);
-      } else {
-        // Show error message
-        showMessage("Invalid username or password. Try francis/123", "error");
-
-        // Shake the form to indicate error
-        loginForm.classList.add("shake");
-        setTimeout(() => {
-          loginForm.classList.remove("shake");
-        }, 500);
+      
+      const email = usernameInput.value;
+      const password = passwordInput.value;
+      
+      // Basic validation
+      if (!email || !password) {
+        errorMessage.textContent = 'Please fill in all fields.';
+        errorMessage.style.display = 'block';
+        return;
+      }
+      
+      try {
+        // For demo purposes, we'll use a simple authentication
+        // In a real application, you would make an API call to your backend
+        if (email === 'demo@example.com' && password === 'password') {
+          // Store authentication state
+          localStorage.setItem('isAuthenticated', 'true');
+          localStorage.setItem('userEmail', email);
+          
+          // Redirect to dashboard
+          window.location.href = 'dashboard.html';
+        } else {
+          errorMessage.textContent = 'Invalid email or password.';
+          errorMessage.style.display = 'block';
+        }
+      } catch (error) {
+        errorMessage.textContent = 'An error occurred. Please try again.';
+        errorMessage.style.display = 'block';
       }
     });
   }

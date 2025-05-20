@@ -3,58 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AfterClass - Login</title>
+  <title>Login - Afterclass</title>
+  <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="login.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
   <script src="login.js" defer></script>
 </head>
 <body>
-  <div class="auth-container">
-    <div class="auth-header-wrapper">
-      <header class="header">
-        <div class="logo">
-          <img src="images/logo.png" alt="AfterClass Logo" />
-          <span>after<span class="blue">class</span></span>
-        </div>
-        <nav class="nav">
-          <a href="index.html">HOME</a>
-          <a href="signup.html">SIGN UP</a>
-          <a href="login.html">SIGN IN</a>
-          <a href="#" class="download-btn">Free Download</a>
-        </nav>
-      </header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <span>afterclass</span>
     </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">Features</a>
+      <a href="#">About</a>
+    </div>
+    <div class="auth-buttons">
+      <a href="#" class="login-btn">Login</a>
+      <a href="signup.html" class="signup-btn">Sign Up</a>
+    </div>
+  </nav>
 
-    <main class="auth-main">
-      <section class="auth-left">
-        <div class="auth-form-container">
-          <div class="auth-form-header">
-            <h1>Welcome Back</h1>
-            <p>Enter your email and password to sign in</p>
-          </div>
-          <form class="auth-form">
-            <div class="form-group">
-              <input type="email" id="username" placeholder="Your email address" required />
-            </div>
-            <div class="form-group">
-              <input type="password" id="password" placeholder="Your password" required />
-            </div>
-            <div class="remember-me">
-              <input type="checkbox" id="remember" />
-              <label for="remember">Remember me</label>
-            </div>
-            <button type="submit" class="auth-button">SIGN IN</button>
-            <p class="auth-alt">
-              Don’t have an account? <a href="signup.html">Sign up</a>
-            </p>
-          </form>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome Back</h1>
+      <p>Log in with your credentials to sign in</p>
+
+      <div id="error-message" style="color: var(--danger); text-align: center; display: none;"></div>
+
+      <form id="loginForm">
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
         </div>
-      </section>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="remember"> Remember me
+          </label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="primary-btn">Sign In</button>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </form>
+    </div>
+  </section>
 
-      <section class="auth-right">
-        <div class="auth-background"></div>
-      </section>
-    </main>
-  </div>
+  <script src="login.js"></script>
 </body>
 </html>
